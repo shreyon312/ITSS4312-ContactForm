@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+  </head>
+  <body>
+	<h1>Give us your Feedback!</h1>
+    <h3>Do you have any issues with our product? If so, please give us feedback on how to improve it.</h3>
+    <form method="POST" class="form-container" action="#">
+        {{form.email.label()}}
+        {{form.email()}}
+        {{form.message.label()}}
+        {{form.message()}}
+        {{form.submit()}}
+    </form>
+  </body>
+</html>
