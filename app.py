@@ -5,14 +5,13 @@ from ContactForm import ContactForm
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "qwerTY"
 
-@app.route("/", methods = ["GET", "Post"])
+@app.route("/", methods = ["GET", "POST"])
 def home():
     form = ContactForm()
-    if form.validate_on_submit():
+    if form.is_submitted():
         with open("data.csv", "a") as file:
             writer = csv.writer(file)
-            writer.writerow([form.data["name"], form.data["email"], form.data["message"]])
-            print([form.data["name"], form.data["email"], form.data["message"]])
+            writer.writerow([form.data["email"], form.data["message"]])
         return redirect(url_for("home"))
     return render_template("index.html", form=form)
 
