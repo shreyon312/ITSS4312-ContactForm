@@ -1,0 +1,155 @@
+body {
+    background-color: #181818;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+
+.main-container {
+    margin: auto;
+    width: 60%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    background-color: #BD54D7;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.header-container h1 {
+    color:#6B1C7E;
+    margin: 0;
+}
+
+.header-container h3 {
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.form-container {
+    background-color:#EBADEC;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.form-label {
+    color:#8751A8;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 12%;
+    justify-content: space-between;
+}
+
+.email-input {
+    background-color: #D9D9D9;
+    border: 0;
+    height: 50%;
+}
+
+.message-input {
+    background-color: #D9D9D9;
+    border: 0;
+    width: 100%;
+    height: 30%;
+    resize: none;
+    box-shadow: 0.15vw 0.25vw #8c8c8c;
+}
+
+.message-input::placeholder {
+    color:#8751A8;
+    font-size: 1.3vw;
+    
+}
+
+.submit-button {
+    width: 45%;
+    margin: 0 auto;
+    height: 7%;
+    background-color: #D9D9D9;
+    color: #6B1C7E;
+    font-size: 1.3vw;
+    font-weight: bold;
+    border: 0;
+    box-shadow: 0.15vw 0.25vw #8c8c8c;
+    cursor: pointer;
+}
+
+
+
+.rating-container {
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:2.5em;
+    width:5em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .rating-container input {
+    display:none;
+  }
+  
+  .rating-container label {
+    color:#D9D9D9;
+    cursor:pointer;
+  }
+  
+  .rating-container :checked ~ label {
+    color:#A158B3;
+  }
+
+  /* .rating-container li input:checked ~ label{
+    color:green;
+  } */
+  
+  .rating-container label:hover,
+  .rating-container label:hover ~ label {
+    color:#A158B3;
+  }
+
+  /* .rating-container li:hover label,
+  .rating-container li:hover ~ li label{
+    color:#A158B3;
+  } */
+
+  .overall {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register-container {
+    margin: auto;
+    background-color: #EBADEC;;
+    width: 50%;
+    height: 40%;
+  }
+
+  .register-container h1 {
+    text-align: center;
+    background-color: #BD54D7;
+    color:#6B1C7E;
+  }
+
+  .register-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
