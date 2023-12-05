@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+  </head>
+  <body>
+    <div class="register-container">
+        <h1>Sign Up</h1>
+        <div class="register-form-container">
+            <form method="POST" action="#">
+                {{form.email.label(class_='form-label')}}
+                {{form.email()}}<br><br>
+                {{form.password.label(class_='form-label')}}
+                {{form.password()}}<br><br>
+                {{form.signin()}}
+            </form>
+        </div>
+        
+    </div>
+    
+  </body>
+</html>

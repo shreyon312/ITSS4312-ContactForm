@@ -1,10 +1,11 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, EmailField, TextAreaField, SubmitField
+from wtforms import StringField, EmailField, TextAreaField, SubmitField, RadioField
 from wtforms.validators import DataRequired, Length, Email
+from wtforms import widgets
 
 class ContactForm(FlaskForm):
-    # name = StringField("Name")
-    email = EmailField("Email", validators=[DataRequired(), Email()])
-    message = TextAreaField("Message")
-    submit = SubmitField("Submit")
+    email = EmailField("Enter your email:", validators=[DataRequired(), Email()])
+    rating = RadioField("Rate your experience!", choices=[(5, '★'),(4,'★'),(3,'★'),(2,'★'),(1,'★')])
+    message = TextAreaField("Message", validators=[DataRequired()])
+    submit = SubmitField("Submit Feedback")
 
