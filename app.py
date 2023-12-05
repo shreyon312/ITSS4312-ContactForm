@@ -27,7 +27,7 @@ def home():
         with open("data.csv", "a") as file:
             writer = csv.writer(file)
             writer.writerow([form.data["email"], form.data["rating"], form.data["message"]])
-        return redirect(url_for("home"))
+        return redirect(url_for("success"))
     return render_template("index.html", form=form)
 
 @app.route('/register', methods=['GET', 'POST'])
